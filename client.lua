@@ -160,7 +160,7 @@ CreateThread(function()
         if PlayerGang.name ~= nil then
             local pos = GetEntityCoords(PlayerPedId())
             for k, v in pairs(Config.Gangs) do
-                if k == PlayerGang.name then
+                if k == PlayerGang.name and PlayerGang.isboss then
                     if #(pos - v) < 1.0 then
                         sleep = 5
                         DrawText3D(v, "~g~E~w~ - Gang Menu")
